@@ -41,9 +41,24 @@ var server = http.createServer(function(request, response) {
                 }  
             });  
             break;  
+        case '/joy.php':  
+            fs.readFile(__dirname + path, function(error, data) {  
+                if (error) {  
+                    response.writeHead(404);  
+                    response.write(error);  
+                    response.end();  
+                } else {  
+                    response.writeHead(200, {  
+                        'Content-Type': 'text/html'  
+                    });  
+                    response.write(data);  
+                    response.end();  
+                }  
+            });  
+            break;  
         default:  
             response.writeHead(404);  
-            response.write("opps this doesn't exist - 404");  
+            response.write("halaman yang anda cari tidak ada - 404");  
             response.end();  
             break;  
     }  
