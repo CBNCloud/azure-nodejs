@@ -8,7 +8,7 @@ var server = http.createServer(function(request, response) {
             response.writeHead(200, {  
                 'Content-Type': 'text/plain'  
             });  
-            response.write("This is Test Message.");  
+            response.write("Welcome to CBNCloud Azure Stack Workshop.");  
             response.end();  
             break;  
         case '/html1.html':  
