@@ -1,1 +1,5 @@
-<h1>OIIIIIIIIIIIIIIIIIIIIII THIS IS PHP FILE</h1>
+<?php
+
+echo "Joy Keren Banget";
+
+?>
