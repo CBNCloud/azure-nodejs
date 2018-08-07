@@ -8,7 +8,7 @@ var server = http.createServer(function(request, response) {
             response.writeHead(200, {  
                 'Content-Type': 'text/plain'  
             });  
-            response.write("Welcome to CBNCloud Azure Stack Workshop.");  
+            response.write("Welcome to CBNCloud Azure Stack Workshop. <img src='https://i0.wp.com/technology.amis.nl/wp-content/uploads/2016/04/my-first-nodejs-service.png'>");  
             response.end();  
             break;  
         case '/html1.html':  
