@@ -10,6 +10,7 @@ var server = http.createServer(function(request, response) {
             });  
 			res.write('<html><head></head><body>');
 			res.write('<p>Welcome to CBNCloud Azure Stack Workshop</p> <br/> <img src="https://i0.wp.com/technology.amis.nl/wp-content/uploads/2016/04/my-first-nodejs-service.png">');
+			res.end('</body></html>');
             response.end();  
             break;  
         case '/html1.html':  
