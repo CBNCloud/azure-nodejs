@@ -9,7 +9,7 @@ var server = http.createServer(function(request, response) {
                 'Content-Type': 'text/html'  
             });  
 			response.write('<html><head></head><body>');
-			response.write('<p>Welcome to CBNCloud Azure Stack Workshop</p> <br/>');
+            response.write("<h1>Welcome to CBNCloud Azure Stack Workshop.</h1><br/> <img src='https://i0.wp.com/technology.amis.nl/wp-content/uploads/2016/04/my-first-nodejs-service.png'>");  
 			response.write('</body></html>');
             response.end();  
             break;  
