@@ -8,9 +8,9 @@ var server = http.createServer(function(request, response) {
             response.writeHead(200, {  
                 'Content-Type': 'text/html'  
             });  
-			res.write('<html><head></head><body>');
-			res.write('<p>Welcome to CBNCloud Azure Stack Workshop</p> <br/>');
-			res.end('</body></html>');
+			response.write('<html><head></head><body>');
+			response.write('<p>Welcome to CBNCloud Azure Stack Workshop</p> <br/>');
+			response.write('</body></html>');
             response.end();  
             break;  
         case '/html1.html':  
