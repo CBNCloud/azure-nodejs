@@ -6,9 +6,10 @@ var server = http.createServer(function(request, response) {
     switch (path) {  
         case '/':  
             response.writeHead(200, {  
-                'Content-Type': 'text/plain'  
+                'Content-Type': 'text/html'  
             });  
-            response.write("Welcome to CBNCloud Azure Stack Workshop. <img src='https://i0.wp.com/technology.amis.nl/wp-content/uploads/2016/04/my-first-nodejs-service.png'>");  
+			res.write('<html><head></head><body>');
+			res.write('<p>Welcome to CBNCloud Azure Stack Workshop</p> <br/> <img src="https://i0.wp.com/technology.amis.nl/wp-content/uploads/2016/04/my-first-nodejs-service.png">');
             response.end();  
             break;  
         case '/html1.html':  
