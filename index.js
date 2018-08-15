@@ -8,10 +8,19 @@ var server = http.createServer(function(request, response) {
             response.writeHead(200, {  
                 'Content-Type': 'text/html'  
             });  
-			response.write('<html><head></head><body>');
-            response.write("<h1>Welcome to CBNCloud Azure Stack Workshop.</h1><br/> <img src='https://i0.wp.com/technology.amis.nl/wp-content/uploads/2016/04/my-first-nodejs-service.png'>");  
-			response.write('</body></html>');
-            response.end();  
+			// response.write('<html><head></head><body>');
+            // response.write("<h1>Welcome to CBNCloud Azure Stack Workshop.</h1><br/> <img src='https://i0.wp.com/technology.amis.nl/wp-content/uploads/2016/04/my-first-nodejs-service.png'>");  
+			// response.write('</body></html>');
+            
+            fs.readFile('background.html', function(err, data){
+                  
+                if(err){
+                  return console.log(err);
+                }
+              response.end(data);
+              });
+
+            //response.end();  
             break;  
         case '/html1.html':  
             fs.readFile(__dirname + path, function(error, data) {  
